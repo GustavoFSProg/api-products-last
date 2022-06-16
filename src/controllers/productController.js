@@ -39,7 +39,7 @@ async function getAll(rreq, res) {
   try {
     const product = await prisma.products.findMany()
 
-    return res.status(201).send({ product })
+    return res.status(201).send( product)
   } catch (error) {
     return res.status(400).json({ msg: 'ERROR!', error })
   }
