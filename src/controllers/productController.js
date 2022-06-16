@@ -51,7 +51,7 @@ async function getOne(req, res) {
       where: { title: req.body.title },
     })
 
-    return res.status(201).send({ product })
+    return res.status(201).send( product )
   } catch (error) {
     return res.status(400).json({ msg: 'ERROR!', error })
   }
